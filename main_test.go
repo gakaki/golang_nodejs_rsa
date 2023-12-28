@@ -11,7 +11,7 @@ func TestSign(t *testing.T) {
 	PUBLIC_KEY, _ := ReadFromKey("public.key")
 
 	//原内容
-	str := "我是orderNumber"
+	str := "SHDR-ORDER-NO-123456"
 	//生成签名
 	sig := RSASign(str, PRIVATE_KEY, crypto.SHA256)
 	log.Println(sig)

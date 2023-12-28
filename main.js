@@ -79,7 +79,7 @@ console.log(aliceKeyPair.publicKey)
 fs.writeFileSync('./public.key', aliceKeyPair.publicKey);
 
 
-const message = '我是orderNumber';
+const message = 'SHDR-ORDER-NO-123456';
 const encryptedMessage = encrypt(message, aliceKeyPair.publicKey);
 const decryptedMessage = decrypt(encryptedMessage, aliceKeyPair.privateKey);
 console.assert(message === decryptedMessage, 'encrypt decrypted should be the same');
